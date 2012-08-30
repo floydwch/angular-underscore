@@ -1,0 +1,21 @@
+{
+  "name": "angular-underscore",
+  "description": "Underscore adapter for AngularJS.",
+  "version": "0.2.0",
+  "author": "floydsoft <floydsoft@gmail.com>",
+  "main": "angular-underscore.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib": "*",
+    "requirejs": "*",
+    "underscore": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/floydsoft/angular-underscore"
+  }/*,
+  "scripts": {
+    "test": "mocha"
+  }*/
+}
