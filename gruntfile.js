@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
   'use strict';
 
-  // Project configuration.
   grunt.initConfig({
     lint: {
       options: {
@@ -87,33 +86,11 @@ module.exports = function(grunt) {
     grunt.config.get('requirejs').compile.options.include.push(renderConfig[target].out.substr(4));
   });
 
-  console.log(grunt.file.expandFiles('src/filters/*'));
-
   grunt.config.set('render', renderConfig);
   grunt.config.set('clean', cleanConfig);
 
   grunt.loadNpmTasks('grunt-contrib');
-  // grunt.loadNpmTasks('grunt-requirejs');
   grunt.loadTasks('grunt/tasks');
 
-  // Default task.
-  // grunt.registerTask('default', 'genFilters genUtils lint');
   grunt.registerTask('default', ['render', 'lint', 'requirejs', 'min', 'clean']);
-
-  // grunt.registerMultiTask('genFilters', function() {
-
-  // });
-
-  // grunt.registerMultiTask('cleanFilters', function() {
-
-  // });
-
-  // grunt.registerMultiTask('genUtils', function() {
-
-  // });
-
-  // grunt.registerMultiTask('cleanUtils', function() {
-
-  // });
-
 };
