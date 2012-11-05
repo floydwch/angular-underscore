@@ -16,8 +16,12 @@
   "browser": true,
   "node": true,
   "devel": true,
+  "unused": true,
+  "quotmark": "single",
   "predef": [
     "require",
-    "define"
+    "define",
+    "angular",
+    "_"
   ]
 }
