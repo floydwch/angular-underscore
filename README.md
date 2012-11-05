@@ -18,26 +18,36 @@ For API details please check out http://underscorejs.org/
 
 After load angular.js and underscore.js:
 
+```html
 <script type="text/javascript" src="angular-underscore.js"></script>
+```
 
 ### Load angular-underscore
 
 #### Load whole stuff
 
+```javascript
 angular.module('yourAwesomeApp', ['angular-underscore']);
+```
 
 #### Load API only
 
+```javascript
 angular.module('yourAwesomeApp', ['angular-underscore/utils']);
+```
 
 #### Load filters only
 
+```javascript
 angular.module('yourAwesomeApp', ['angular-underscore/filters']);
+```
 
 #### Load specific feature only
 
+```javascript
 // load `shuffle` only
 angular.module('yourAwesomeApp', ['angular-underscore/filters/shuffle']);
+```
 
 ### Usecase
 
