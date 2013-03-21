@@ -97,6 +97,7 @@
       ['find', 'detect'],
       ['filter', 'select'],
       'where',
+      'findWhere',
       'reject',
       'invoke',
       'pluck',
