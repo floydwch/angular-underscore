@@ -61,3 +61,10 @@ angular.module('yourAwesomeApp', ['angular-underscore/filters/shuffle']);
   <div ng-repeat="num in range(10)|shuffle">{{num}}</div>
 </body>
 ```
+
+### Local build
+
+```
+$ npm install uglify-js -g
+$ uglifyjs angular-underscore.js > angular-underscore.min.js
+```
