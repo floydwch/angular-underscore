@@ -69,7 +69,7 @@ $ npm install uglify-js -g
 $ uglifyjs angular-underscore.js > angular-underscore.min.js
 ```
 
-### License
+## License
 
 (The MIT License)
 
