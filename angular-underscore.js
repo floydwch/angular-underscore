@@ -35,12 +35,12 @@
   // Shiv "filter", "reject" to angular's built-in,
   // and reserve underscore's feature(works on obj).
   ng.injector(['ng']).invoke(['$filter', function($filter) {
-    _.filter = _.select = _.wrap($filter('filter'), function(filter, obj, exp) {
+    _.filter = _.select = _.wrap($filter('filter'), function(filter, obj, exp, comparator) {
       if(!(_.isArray(obj))) {
         obj = _.toArray(obj);
       }
 
-      return filter(obj, exp);
+      return filter(obj, exp, comparator);
     });
 
     _.reject = function(obj, exp) {
