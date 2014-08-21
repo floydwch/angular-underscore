@@ -96,6 +96,7 @@
       'indexBy',
       'countBy',
       'shuffle',
+      'sample',
       'toArray',
       'size',
       ['first', 'head', 'take'],
