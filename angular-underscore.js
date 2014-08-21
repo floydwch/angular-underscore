@@ -93,6 +93,7 @@
       'min',
       'sortBy',
       'groupBy',
+      'indexBy',
       'countBy',
       'shuffle',
       'toArray',
@@ -104,6 +105,7 @@
       'compact',
       'flatten',
       'without',
+      'partition',
       'union',
       'intersection',
       'difference',
@@ -124,6 +126,7 @@
       'identity',
       'uniqueId',
       'escape',
+      'unescape',
       'result',
       'template'
     ];
