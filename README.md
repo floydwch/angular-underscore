@@ -51,6 +51,8 @@ angular.module('yourAwesomeApp', ['angular-underscore/filters/shuffle']);
 
 ### Usecase
 
+#### From the Template
+
 ```html
 <script type="text/javascript">
   angular.module('example', ['angular-underscore']);
@@ -60,6 +62,17 @@ angular.module('yourAwesomeApp', ['angular-underscore/filters/shuffle']);
   <!-- generate 10 unduplicated random number from 0 to 9 -->
   <div ng-repeat="num in range(10)|shuffle">{{num}}</div>
 </body>
+```
+
+#### From the Controller
+
+```
+angular.module('yourAwesomeApp', ['angular-underscore'])
+.controller('yourAwesomeCtrl', function($scope) {
+    $scope.sample([1, 2, 3]); // got 1, or 2, or 3.
+    $scope._([1, 2, 3]); // underscore's chain, http://underscorejs.org/#chain
+});
+
 ```
 
 ### Local build
