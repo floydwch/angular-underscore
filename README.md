@@ -66,7 +66,7 @@ angular.module('yourAwesomeApp', ['angular-underscore/filters/shuffle']);
 
 #### From the Controller
 
-```
+```javascript
 angular.module('yourAwesomeApp', ['angular-underscore'])
 .controller('yourAwesomeCtrl', function($scope) {
     $scope.sample([1, 2, 3]); // got 1, or 2, or 3.
