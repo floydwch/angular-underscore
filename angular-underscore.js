@@ -58,10 +58,8 @@
   // simplify custome overriding on angular side
   var
     adapFunc = {
-      'groupBy': _.memoize(function (collection) {
-        return _.groupBy(collection, function (item) {
-          return item.owner;
-        });
+      'groupBy': _.memoize(function (collection, param) {
+        return _.groupBy(collection, param);
       })
     };
 
