@@ -55,6 +55,14 @@
     };
   }]);
 
+  // simplify custome overriding on angular side
+  var
+    adapFunc = {
+      'groupBy': _.memoize(function (collection, param) {
+        return _.groupBy(collection, param);
+      })
+    };
+
   // end custom _
 
 
@@ -73,8 +81,7 @@
   });
 
   // end register angular-underscore/utils
-
-
+        
   // begin register angular-underscore/filters
 
   var
@@ -138,7 +145,7 @@
     }
 
     var
-      filter = _.bind(_[filterNames[0]], _),
+      filter = _.bind(adapFunc[filterNames[0]] ? adapFunc[filterNames[0]] : _[filterNames[0]], _),
       filterFactory = function() {return filter;};
 
     _.each(filterNames, function(filterName) {
@@ -153,5 +160,6 @@
   });
 
   // end register angular-underscore/filters
+      
 
 }(angular, _));
